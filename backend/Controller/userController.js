@@ -1,5 +1,7 @@
 const asyncHandler = require("express-async-handler")
 
+const User = require("../Model/userModel");
+
 const getUsers = asyncHandler(async (req, res) => {
     res.status(200).json({message: "Get Users"});
 })
