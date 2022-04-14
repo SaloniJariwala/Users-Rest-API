@@ -13,7 +13,7 @@ const getUserById = asyncHandler(async (req, res) => {
 });
 
 const setUsers = asyncHandler(async (req, res) => {
-    console.log("-----In Set User-----");
+    //console.log("-----In Set User-----");
     if(!req.body){
         //console.log(req.body.name);
         res.status(400);
@@ -54,7 +54,7 @@ const deleteUsers = asyncHandler(async (req, res) => {
 
     await user.remove();
 
-    res.status(200).json({ message: `Delete user having id ${req.params.id}`});
+    res.status(200).json(user);
 })
 
 module.exports = { getUsers, setUsers, putUsers, deleteUsers, getUserById }
